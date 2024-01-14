@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: hsl(275, 100%, 97%);
-  min-height: 100vh;
+  min-height: 120vh;
   display: grid;
   place-items: center;
   font-family: "Work Sans", sans-serif;
@@ -34,17 +34,21 @@ body {
 }
 
 .card-title-starLogo {
-  width: 20px;
+  width: 18px;
 }
 
 .card-title-faq {
   color: hsl(292, 42%, 14%);
+  font-size: 1.4rem;
 }
 
 .card-faq-container {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+.card-faq-item {
   color: hsl(292, 42%, 14%);
   font-weight: bold;
 }
@@ -53,21 +57,70 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
 }
 
-.card-faq-question-paragraph {
+.card-faq-question-title {
   font-size: 0.85rem;
+  width: 22ch;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card-faq-question-title:hover {
+  color: hsl(276, 100%, 60%);
+}
+
+.card-faq-sign {
+  width: 28px;
 }
 
 .card-faq-answer {
+  color: hsl(292, 16%, 49%);
+  font-weight: 500;
+  font-size: 0.7rem;
+  margin-top: 25px;
   display: none;
 }
 
-/* .attribution {
-  font-size: 11px;
+.attribution {
+  font-size: 0.7rem;
+  font-weight: bold;
   text-align: center;
+  color: hsl(292, 42%, 14%);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
-} */
+  color: hsl(276, 100%, 60%);
+}
+
+@media (min-width: 767px) {
+  body {
+    background-image: url(../assets/images/background-pattern-desktop.svg);
+  }
+
+  .card {
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  .card-title-starLogo {
+    width: 30px;
+  }
+
+  .card-title-faq {
+    font-size: 1.8rem;
+  }
+
+  .card-faq-question-title {
+    font-size: 1rem;
+    width: 30ch;
+  }
+
+  .card-faq-sign {
+    width: 35px;
+  }
+
+  .card-faq-answer {
+    font-size: 0.85rem;
+  }
+}
